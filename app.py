@@ -39,13 +39,9 @@ if submit_button:
     else:
         st.error("กรุณากรอกชื่อสารเคมีและสูตรเคมีให้ครบถ้วน")
 
----
-
 # 3. แสดงตารางข้อมูลปัจจุบัน
 st.subheader("📊 รายการสารเคมีในระบบ")
 st.dataframe(st.session_state.chemical_data, use_container_width=True)
-
----
 
 # 4. ฟังก์ชันสำหรับการ Export เป็น Excel
 def to_excel(df):
